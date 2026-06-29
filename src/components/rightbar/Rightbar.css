@@ -1,0 +1,175 @@
+.rightbar {
+  flex: 3.5;
+}
+
+.rightbarWrapper {
+  padding: 20px 20px 0 0;
+}
+
+.birthdayContainer {
+  display: flex;
+  align-items: center;
+}
+
+.birthdayImg {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.birthdayText {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.rightbarAd {
+  width: 100%;
+  border-radius: 14px;
+  margin: 24px 0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+}
+
+.rightbarAd:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+}
+
+.rightbarTitle{
+    margin-bottom: 20px;
+}
+
+.rightbarFriendList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.rightbarTitle{
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.rightbarInfo{
+  margin-bottom: 30px;
+}
+
+.rightbarInfoItem{
+  margin-bottom: 10px;
+}
+
+.rightbarInfoKey{
+  font-weight: 500;
+  margin-right: 15px;
+  color: #555;
+}
+
+.rightbarInfoValue{
+  font-weight: 300;
+}
+
+.rightbarFollowings{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.rightbarFollowing{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.rightbarFollowingImg{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 480px) {
+  /* body {
+    background-color:yellow;
+  } */
+  html{
+    font-size: 55%;
+  }
+  .rightbar {
+    width: 100vw;
+   
+  }
+  .rightbarFriendList {
+    padding: 0;
+    margin-left: 15%;
+    list-style: none;
+  }
+  .rightbarTitle{
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+
+  
+ 
+}
+
+.addMemberContainer {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0px 4px 15px rgba(15, 23, 42, 0.05);
+  border: 1px solid #f1f5f9;
+}
+.addMemberTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #0f172a;
+  letter-spacing: -0.2px;
+}
+.addMemberForm {
+  display: flex;
+  gap: 8px;
+}
+.addMemberInput {
+  flex: 1;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 8px 16px;
+  font-size: 13px;
+  outline: none;
+  background-color: #f8fafc;
+  color: #1e293b;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s ease;
+}
+.addMemberInput:focus {
+  border-color: #3b82f6;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 0px 3px rgba(59, 130, 246, 0.1);
+}
+.addMemberButton {
+  background-color: #1e293b;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  padding: 8px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  transition: all 0.2s ease-in-out;
+  font-family: 'Inter', sans-serif;
+}
+.addMemberButton:hover {
+  background-color: #0f172a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.15);
+}

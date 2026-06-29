@@ -1,0 +1,179 @@
+ .post {
+    width: 100%;
+    border-radius: 16px;
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    margin: 20px 0;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .postWrapper {
+    padding: 10px;
+  }
+  .postTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .postProfileImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .postTopLeft{
+    display: flex;
+    align-items: center;
+  }
+  .postUsername {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 10px;
+  }
+  
+  .postDate{
+      font-size: 13px;
+  }
+  .postCenter{
+    margin: 20px 0;
+  }
+  .postImg{
+    margin-top: 20px;
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+}
+.postBottom
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.postBottomLeft{
+    display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.likeIcon
+{
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.postLikeCounter{
+    font-size: 15px;
+}
+
+.postCommentText{
+    cursor: pointer;
+    border-bottom: 1px dashed gray;
+    font-size: 15px;
+}
+
+.postMeta {
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+/* Reactions styles */
+.reactionsContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.reactionsPopup {
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  display: flex;
+  gap: 12px;
+  background-color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 20px rgba(15, 23, 42, 0.15);
+  border: 1px solid #f1f5f9;
+  z-index: 99;
+  animation: floatUp 0.15s ease-out;
+}
+
+.reactionsPopup span {
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.reactionsPopup span:hover {
+  transform: scale(1.3);
+}
+
+@keyframes floatUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.activeReaction {
+  font-weight: 700;
+  color: #3b82f6;
+  font-size: 14.5px;
+  cursor: pointer;
+}
+
+.postButtonLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Post Dropdown Menu styles */
+.postTopRightContainer {
+  position: relative;
+}
+
+.postMenuDropdown {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(15, 23, 42, 0.1);
+  border: 1px solid #e2e8f0;
+  padding: 6px 0;
+  width: 140px;
+  z-index: 50;
+  animation: floatUp 0.15s ease-out;
+}
+
+.postMenuItem {
+  padding: 8px 14px;
+  font-size: 13px;
+  color: #475569;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.15s;
+}
+
+.postMenuItem:hover {
+  background-color: #f8fafc;
+}
+
+.postMenuItem.delete {
+  color: #ef4444;
+}
+
+.postMenuItem.delete:hover {
+  background-color: #fef2f2;
+}

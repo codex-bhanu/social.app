@@ -1,0 +1,35 @@
+.sidebarFriend {
+  
+   display: flex; 
+   flex-direction: row;
+   align-items: center;
+   margin-bottom: 15px;
+
+ }
+ 
+ .sidebarFriendImg {
+   width: 32px;
+   height: 32px;
+   border-radius: 50%;
+   object-fit: cover;
+   margin-right: 10px;
+ }
+ @media only screen and (max-width: 480px) {
+  .sidebarFriend {
+  
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+ 
+  }
+  
+  .sidebarFriendImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+ }

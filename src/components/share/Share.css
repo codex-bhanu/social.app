@@ -1,0 +1,128 @@
+.share {
+  width: 100%;
+  height: auto;
+  min-height: 170px;
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  padding: 16px;
+  box-sizing: border-box;
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.shareWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.shareTop {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.shareProfileImg {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #3b82f6;
+}
+
+.shareInput {
+  border: none;
+  flex: 1;
+  font-size: 15px;
+  color: #1e293b;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+}
+
+.shareInput::placeholder {
+  color: #94a3b8;
+}
+
+.shareHr {
+  margin: 16px 0;
+  border: 0;
+  border-top: 1px solid #f1f5f9;
+}
+
+.shareBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shareOptions {
+  display: flex;
+  gap: 16px;
+}
+
+.shareOption {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.shareOption:hover {
+  background-color: #f8fafc;
+  transform: translateY(-1px);
+}
+
+.shareIcon {
+  font-size: 18px;
+}
+
+/* Accent colors for option icons */
+.shareOption:nth-child(1) .shareIcon {
+  color: #f43f5e; /* Rose */
+}
+
+.shareOption:nth-child(2) .shareIcon {
+  color: #3b82f6; /* Blue */
+}
+
+.shareOption:nth-child(3) .shareIcon {
+  color: #10b981; /* Emerald */
+}
+
+.shareOption:nth-child(4) .shareIcon {
+  color: #eab308; /* Amber */
+}
+
+.shareOptionText {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.shareButton {
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  background-color: #1e293b;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  font-size: 13px;
+  transition: all 0.2s ease-in-out;
+  font-family: 'Inter', sans-serif;
+}
+
+.shareButton:hover {
+  background-color: #0f172a;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+  transform: translateY(-1px);
+}
+
+@media only screen and (max-width: 480px) {
+  #shareOption {
+    display: none;
+  }
+}

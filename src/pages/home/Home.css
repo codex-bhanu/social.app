@@ -1,0 +1,12 @@
+.homeContainer{
+    display: flex;
+    width: 100%;
+}
+@media only screen and (max-width: 480px) { 
+    .homeContainer{
+        display: flex;
+       flex-direction: column;
+
+    }
+    
+}
