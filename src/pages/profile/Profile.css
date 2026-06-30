@@ -105,3 +105,42 @@
     0% { transform: translateX(0); }
     100% { transform: translateX(100%); }
 }
+
+@media only screen and (max-width: 767px) {
+  .profile {
+    display: block;
+    padding-bottom: 75px; /* Leave space for bottom navigation bar */
+  }
+
+  .profileRight {
+    width: 100%;
+  }
+
+  .profileCover {
+    height: 220px;
+  }
+
+  .profileCoverImg {
+    height: 170px;
+  }
+
+  .profileUserImg {
+    width: 110px;
+    height: 110px;
+    top: 110px;
+  }
+
+  .profileInfoName {
+    font-size: 20px;
+  }
+
+  .profileInfoDesc {
+    font-size: 13px;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .profileRightBottom {
+    flex-direction: column;
+  }
+}

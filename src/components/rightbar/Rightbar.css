@@ -89,31 +89,24 @@
   object-fit: cover;
   border-radius: 5px;
 }
-@media only screen and (max-width: 480px) {
-  /* body {
-    background-color:yellow;
-  } */
-  html{
-    font-size: 55%;
-  }
+@media only screen and (max-width: 767px) {
   .rightbar {
-    width: 100vw;
-   
-  }
-  .rightbarFriendList {
-    padding: 0;
-    margin-left: 15%;
-    list-style: none;
-  }
-  .rightbarTitle{
-    font-size: 3rem;
-    font-weight: 500;
-    margin-bottom: 10px;
+    display: none;
   }
   
+  .drawer-content .rightbar,
+  .profileRightBottom .rightbar {
+    display: block;
+    width: 100%;
+  }
 
-  
- 
+  .profileRightBottom .rightbar {
+    padding: 20px;
+  }
+
+  .profileRightBottom .rightbarWrapper {
+    padding: 0;
+  }
 }
 
 .addMemberContainer {

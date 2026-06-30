@@ -652,14 +652,40 @@
   color: #64748b;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 767px) {
+  .tabContentContainer {
+    margin: 0;
+    padding: 16px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+  }
+  
   .chatsTab {
     flex-direction: column;
     height: auto;
   }
+  
   .chatsSidebar {
     width: 100%;
     border-right: none;
-    border-bottom: 1px solid #f1f5f9;
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px 0;
+    max-height: 250px;
+  }
+  
+  .chatWindow {
+    height: 400px;
+  }
+
+  .eventCard {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .eventDateBox {
+    width: 50px;
+    height: 50px;
   }
 }

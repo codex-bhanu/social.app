@@ -4,6 +4,7 @@ import Topbar from '../../components/topbar/Topbar';
 import Feed from '../../components/feed/Feed';
 import Rightbar from '../../components/rightbar/Rightbar';
 import Sidebar from '../../components/sidebar/Sidebar';
+import BottomNavigation from '../../components/bottomNavigation/BottomNavigation';
 import { AppContext } from '../../context/AppContext';
 import ProfileSkeleton from './ProfileSkeleton';
 import './Profile.css';
@@ -21,12 +22,28 @@ const DEFAULT_USER = {
     phone: "7617896131",
     email: "bhanuy9648@gmail.com"
 };
+
 const Profile = () => {
-    const { users } = useContext(AppContext);
+    const { users, leftDrawerOpen, rightDrawerOpen, closeDrawers } = useContext(AppContext);
     const [user, setUser] = useState({});
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const { username } = useParams();
+
+    // Close drawers on mount
+    useEffect(() => {
+        closeDrawers();
+        return () => closeDrawers();
+    }, [closeDrawers]);
+
+    // Lock body scroll when drawer is open
+    useEffect(() => {
+        if (leftDrawerOpen || rightDrawerOpen) {
+            document.body.classList.add('drawer-open');
+        } else {
+            document.body.classList.remove('drawer-open');
+        }
+    }, [leftDrawerOpen, rightDrawerOpen]);
 
     useEffect(() => {
         const fetchUser = async () => {
@@ -110,6 +127,25 @@ const Profile = () => {
                         </>
                     )}
                 </div>
+            </div>
+
+            {/* Mobile Bottom Navigation */}
+            <BottomNavigation />
+
+            {/* Mobile Drawer Overlay Backdrop */}
+            <div 
+                className={`drawer-overlay ${(leftDrawerOpen || rightDrawerOpen) ? 'active' : ''}`} 
+                onClick={closeDrawers}
+            />
+
+            {/* Mobile Left Drawer (Sidebar) */}
+            <div className={`drawer-content drawer-left ${leftDrawerOpen ? 'active' : ''}`}>
+                <Sidebar />
+            </div>
+
+            {/* Mobile Right Drawer (Rightbar) */}
+            <div className={`drawer-content drawer-right ${rightDrawerOpen ? 'active' : ''}`}>
+                <Rightbar />
             </div>
         </>
     );

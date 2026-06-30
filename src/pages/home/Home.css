@@ -2,11 +2,10 @@
     display: flex;
     width: 100%;
 }
-@media only screen and (max-width: 480px) { 
+@media only screen and (max-width: 767px) { 
     .homeContainer{
-        display: flex;
-       flex-direction: column;
-
+        display: block;
+        width: 100%;
+        padding-bottom: 75px; /* Leave space for bottom navigation bar */
     }
-    
 }

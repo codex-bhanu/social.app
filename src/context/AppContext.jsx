@@ -16,6 +16,23 @@ export const AppProvider = ({ children }) => {
   const [activeTab, setActiveTab] = useState("feed");
   const [bookmarkedPostIds, setBookmarkedPostIds] = useState([]);
   const [theme, setTheme] = useState("light");
+  const [leftDrawerOpen, setLeftDrawerOpen] = useState(false);
+  const [rightDrawerOpen, setRightDrawerOpen] = useState(false);
+
+  const toggleLeftDrawer = () => {
+    setLeftDrawerOpen(prev => !prev);
+    setRightDrawerOpen(false);
+  };
+
+  const toggleRightDrawer = () => {
+    setRightDrawerOpen(prev => !prev);
+    setLeftDrawerOpen(false);
+  };
+
+  const closeDrawers = () => {
+    setLeftDrawerOpen(false);
+    setRightDrawerOpen(false);
+  };
 
   const toggleTheme = () => {
     setTheme(prev => {
@@ -287,7 +304,12 @@ export const AppProvider = ({ children }) => {
       createEvent,
       rsvpEvent,
       theme,
-      toggleTheme
+      toggleTheme,
+      leftDrawerOpen,
+      toggleLeftDrawer,
+      rightDrawerOpen,
+      toggleRightDrawer,
+      closeDrawers
     }}>
       {children}
     </AppContext.Provider>

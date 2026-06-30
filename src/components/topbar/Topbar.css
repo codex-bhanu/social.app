@@ -179,22 +179,73 @@ html {
   box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
 }
 
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 50%;
-  }
+.topbarMenuIcon {
+  display: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #e2e8f0;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.topbarMenuIcon:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.mobileSearchToggle, .mobileRightbarToggle {
+  display: none;
+}
+
+.topbarMobileSearch {
+  position: absolute;
+  top: 4.5rem;
+  left: 0;
+  width: 100%;
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 10px 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+}
+
+.topbarMobileSearch .searchbar {
+  width: 100%;
+  background-color: var(--hover-bg);
+  border-radius: 20px;
+  padding: 2px 14px;
+  border: 1px solid var(--border-color);
+}
+
+.topbarMobileSearch .searchInput {
+  color: var(--text-main);
+}
+
+@media only screen and (max-width: 767px) {
   .topbarContainer {
-    height: auto;
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
+    padding: 0 1rem;
   }
-  .topbarLeft, .topbarCenter, .topbarRight {
-    width: 100%;
-    justify-content: center;
+  .topbarLinks {
+    display: none;
   }
   .topbarCenter {
-    margin: 0.5rem 0;
+    display: none;
+  }
+  .topbarMenuIcon {
+    display: flex;
+  }
+  .mobileSearchToggle {
+    display: flex;
+  }
+  .mobileRightbarToggle {
+    display: flex;
+  }
+  .logo {
+    font-size: 1.25rem;
   }
   .homec {
     display: none;
